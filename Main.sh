@@ -156,7 +156,7 @@ function SP_SELECT_SOLIDWORKS {
 
 # Download SOLIDWORKS:
 function SP_SOLIDWORKS_LOAD {
-  wget -N -P "$SP_PATH/downloads" --progress=dot "https://dl-ak.solidworks.com/nonsecure/sw2022/sw2022_sp02.0_f/x64/220318.003-1-PGQH6ND3/SolidWorksSetup.exe" 2>&1 |\
+  wget -N -P "$SP_PATH/downloads" --progress=dot "https://dl-ak.solidworks.com/nonsecure/sw2025/sw2025_sp05.0_f/x64/250926.005-1-FW8MSGD9/SolidWorksSetup.exe" 2>&1 |\
   grep "%" |\
   sed -u -e "s,\.,,g" | awk '{print $2}' | sed -u -e "s,\%,,g"  | dialog --gauge "Download SOLIDWORKS 2022 ..." 10 100
   sleep 1
